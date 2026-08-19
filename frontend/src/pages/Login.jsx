@@ -28,11 +28,15 @@ function Login() {
             dispatch(setUserData(result.data))
             navigate("/")
             setLoading(false)
-            toast.success("Login Successfully")
+            toast.success("Login Successfully", {
+    autoClose: 1500
+})
         } catch (error) {
             console.log(error)
             setLoading(false)
-            toast.error(error.response.data.message)
+            toast.error(error.response.data.message,{
+    autoClose: 1500
+})
         }
         
     }
@@ -51,10 +55,14 @@ function Login() {
                 )
                 dispatch(setUserData(result.data))
                 navigate("/")
-                toast.success("Login Successfully")
+                toast.success("Login Successfully", {
+    autoClose: 1500
+})
             } catch (error) {
                 console.log(error)
-                toast.error(error.response.data.message)
+                toast.error(error.response.data.message,{
+    autoClose: 1500
+})
             }
             
         }
